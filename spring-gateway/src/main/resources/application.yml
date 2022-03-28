@@ -1,0 +1,63 @@
+resilience4j:
+  circuitbreaker:
+    configs:
+      flau:
+        sliding-window-size: 6
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 20s
+        permitted-number-of-call-in-half-open-state: 4
+        slow-call-rate-threshold: 50
+        slow-call-duration-threshold: 2s
+    instances:
+      producto:
+        base-config: flau
+  timelimiter:
+    configs:
+      flau:
+        timeout-duration: 2s
+    instances:
+      producto:
+        base-config: flau
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: service-product
+          uri: lb://service-product
+          predicates:
+            - Path=/api/product/**
+          #            - Header= token, \d+
+          #            - Method=GET, POST
+          #            - Header=Content-Type, application/json
+          #            - Query=color
+          #            - Cookie=color, azul
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: producto
+                statusCodes: 500
+                fallbackUri: forward:/api/items/item/8/quantity/5
+            - StripPrefix= 2
+            - ExampleCookie=This is my personal message, user, FacundoMartinez
+        - id: service-items
+          uri: lb://service-items
+          predicates:
+            - Path=/api/items/**
+          filters:
+            - StripPrefix= 2
+            - AddRequestHeader=token-request, 123456
+            - AddResponseHeader=token-response, 7891011
+            - SetResponseHeader=Content-Type, text/plain
+            - AddRequestParameter=nombre, andres
+        - id: service-oauth
+          uri: lb://service-oauth
+          predicates:
+            - Path=/api/security/**
+          filters:
+            - StripPrefix= 2
+        - id: service-users
+          uri: lb://service-users
+          predicates:
+            - Path=/api/users/**
+          filters:
+            - StripPrefix= 2

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springboot-service-eureka-server" />
+        <module name="springboot-service-zuul-server" />
+        <module name="springboot-service-gateway-server" />
+        <module name="springboot-service-users-commons" />
+        <module name="springboot-service-oauth" />
+        <module name="springboot-servicio-productos" />
+        <module name="springboot-service-item" />
+        <module name="springboot-service-users" />
+        <module name="springboot-service-config-server" />
+        <module name="commons" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="commons" target="11" />
+      <module name="springboot-service-config-server" target="11" />
+      <module name="springboot-service-eureka-server" target="11" />
+      <module name="springboot-service-gateway-server" target="11" />
+      <module name="springboot-service-item" target="11" />
+      <module name="springboot-service-oauth" target="11" />
+      <module name="springboot-service-users" target="11" />
+      <module name="springboot-service-users-commons" target="11" />
+      <module name="springboot-service-zuul-server" target="11" />
+      <module name="springboot-servicio-productos" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="commons" options="-parameters" />
+      <module name="springboot-service-config-server" options="-parameters" />
+      <module name="springboot-service-eureka-server" options="-parameters" />
+      <module name="springboot-service-gateway-server" options="-parameters" />
+      <module name="springboot-service-item" options="-parameters" />
+      <module name="springboot-service-oauth" options="-parameters" />
+      <module name="springboot-service-users" options="-parameters" />
+      <module name="springboot-service-users-commons" options="-parameters" />
+      <module name="springboot-service-zuul-server" options="-parameters" />
+      <module name="springboot-servicio-productos" options="-parameters" />
+    </option>
+  </component>
+</project>

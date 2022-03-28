@@ -1,0 +1,22 @@
+resilience4j:
+  circuitbreaker:
+    configs:
+      flau:
+        sliding-window-size: 6
+        failure-rate-threshold: 50
+        wait-duration-in-open-state: 20s
+        permitted-number-of-call-in-half-open-state: 4
+        slow-call-rate-threshold: 50
+        slow-call-duration-threshold: 2s
+    instances:
+      items:
+        base-config: flau
+  timelimiter:
+    configs:
+      flau:
+        timeout-duration: 2s
+    instances:
+      items:
+        base-config: flau
+
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/commons/commons.iml" filepath="$PROJECT_DIR$/commons/commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-server/springboot-service-config-server.iml" filepath="$PROJECT_DIR$/config-server/springboot-service-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-service-eureka-server/springboot-service-eureka-server.iml" filepath="$PROJECT_DIR$/springboot-service-eureka-server/springboot-service-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-gateway/springboot-service-gateway-server.iml" filepath="$PROJECT_DIR$/spring-gateway/springboot-service-gateway-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../item/springboot-service-item.iml" filepath="$PROJECT_DIR$/../item/springboot-service-item.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-service-oauth/springboot-service-oauth.iml" filepath="$PROJECT_DIR$/springboot-service-oauth/springboot-service-oauth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-service-users/springboot-service-users.iml" filepath="$PROJECT_DIR$/springboot-service-users/springboot-service-users.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-service-users-commons/springboot-service-users-commons.iml" filepath="$PROJECT_DIR$/springboot-service-users-commons/springboot-service-users-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul/springboot-service-zuul-server.iml" filepath="$PROJECT_DIR$/zuul/springboot-service-zuul-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../producto/springboot-servicio-productos.iml" filepath="$PROJECT_DIR$/../producto/springboot-servicio-productos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workspace.iml" filepath="$PROJECT_DIR$/workspace.iml" />
+    </modules>
+  </component>
+</project>
